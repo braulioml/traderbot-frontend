@@ -1,8 +1,7 @@
 <template>
   <div class="home">
 
-    <ArticleWall />
-    <ArticleCreatorForm />
+    <SignalRegister />
 
 
   </div>
@@ -10,14 +9,12 @@
 
 <script>
 
-import ArticleWall from "@/components/ArticleWall"
-import ArticleCreatorForm from "@/components/ArticleCreatorForm"
+import SignalRegister from "@/components/SignalRegister"
 
 export default {
   name: 'Home',
   components: {
-    ArticleWall,
-    ArticleCreatorForm
+    SignalRegister
   }
 }
 </script>

@@ -2,7 +2,7 @@ import axios from 'axios'
 import Auth from './resources/auth'
 // import Order from './resources/orders'
 // import Product from './resources/products'
-import Article from './resources/articles'
+import Signal from './resources/signals'
 
 
 export default {
@@ -12,7 +12,7 @@ export default {
         Vue.prototype.$api = {
             auth: new Auth(axios),
             // products: new Product(axios),
-            articles: new Article(axios),
+            signals: new Signal(axios),
             // orders: new Order(axios)
         }
     }

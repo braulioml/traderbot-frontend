@@ -1,11 +1,11 @@
 <template>
   <section class="has-background-warning-light">
 
-    <h1 class="title has-text-centered p-3">Article Wall</h1>
+    <h1 class="title has-text-centered p-3">Signal Register</h1>
 
       <div class="column is-full">
-        <ArticleItem
-          v-for="item in articles"
+        <SignalItem
+          v-for="item in signals"
           :value="item"
           :key="item._id"
         />
@@ -15,23 +15,23 @@
 </template>
 
 <script>
-import ArticleItem from "@/components/partials/ArticleItem";
+import SignalItem from "@/components/partials/SignalItem";
 
 export default {
-  name: "ArticleWall",
+  name: "SignalRegister",
   components: {
-    ArticleItem
+    SignalItem
   },
   data() {
     return {
-      articles: [],
+      signals: [],
     };
   },
   computed: {
   },
   async beforeMount() {
     try {
-      this.articles = await this.$api.articles.list();
+      this.signals = await this.$api.signals.list();
     } catch (error) {
       alert(error.message);
     }

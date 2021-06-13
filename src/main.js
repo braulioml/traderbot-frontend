@@ -5,7 +5,7 @@ import store from './store'
 
 import meneameAPI from './plugins/api/index'
 
-Vue.use(meneameAPI, {baseURL: 'https://meneame1.herokuapp.com/'})
+Vue.use(meneameAPI, {baseURL: 'http://localhost:3000/'})
 
 // Vue.filter("toMoney", (money) => {
 //   return money.toLocaleString("es-ES", { style: "currency", currency: "EUR"})
